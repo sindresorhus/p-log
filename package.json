@@ -1,0 +1,53 @@
+{
+  "name": "p-log",
+  "version": "0.0.0",
+  "description": "Log the value/error of a promise",
+  "license": "MIT",
+  "repository": "sindresorhus/p-log",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "promise",
+    "log",
+    "logging",
+    "logger",
+    "debug",
+    "debugging",
+    "console",
+    "print",
+    "tap",
+    "catch",
+    "error",
+    "rejection",
+    "chain",
+    "pipeline",
+    "thunk",
+    "function",
+    "async",
+    "await",
+    "promises",
+    "bluebird"
+  ],
+  "dependencies": {
+    "p-tap": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
