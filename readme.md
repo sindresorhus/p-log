@@ -62,6 +62,7 @@ Any return value or exception is ignored.
 
 - [p-tap](https://github.com/sindresorhus/p-tap) - Tap into a promise chain without affecting its value or state
 - [p-if](https://github.com/sindresorhus/p-if) - Conditional promise chains
+- [p-catch-if](https://github.com/sindresorhus/p-catch-if) - Conditional promise catch handler
 - [More…](https://github.com/sindresorhus/promise-fun)
 
 
