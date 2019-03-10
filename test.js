@@ -1,27 +1,29 @@
 import test from 'ava';
-import m from './';
+import pLog from '.';
 
 const fixture = Symbol('fixture');
-const fixtureErr = new Error('fixture');
+const fixtureError = new Error('fixture');
 
 test('pLog()', async t => {
 	t.plan(2);
 
-	const logger = val => {
-		t.is(val, fixture);
+	const logger = value => {
+		t.is(value, fixture);
 	};
 
-	t.is(await Promise.resolve(fixture).then(m(logger)), fixture);
+	t.is(await Promise.resolve(fixture).then(pLog(logger)), fixture);
 });
 
 test('pLog.catch()', async t => {
 	t.plan(2);
 
-	const logger = err => {
-		t.is(err, fixtureErr.stack);
+	const logger = error => {
+		t.is(error, fixtureError.stack);
 	};
 
-	await Promise.reject(fixtureErr).catch(m.catch(logger)).catch(err => {
-		t.is(err.message, fixtureErr.message);
-	});
+	await Promise.reject(fixtureError)
+		.catch(pLog.catch(logger))
+		.catch(error => {
+			t.is(error.message, fixtureError.message);
+		});
 });

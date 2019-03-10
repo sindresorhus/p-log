@@ -55,7 +55,7 @@ Returns a [thunk](https://en.m.wikipedia.org/wiki/Thunk) that returns a `Promise
 Type: `Function`<br>
 Default: `console.log`
 
-Any return value or exception is ignored.
+The logger to use. Any return value or exception is ignored.
 
 
 ## Related
