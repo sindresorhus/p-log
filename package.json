@@ -1,6 +1,6 @@
 {
 	"name": "p-log",
-	"version": "1.0.0",
+	"version": "2.0.0",
 	"description": "Log the value/error of a promise",
 	"license": "MIT",
 	"repository": "sindresorhus/p-log",
