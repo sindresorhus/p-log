@@ -1,12 +1,16 @@
 'use strict';
+
 const pTap = require('p-tap');
 
-module.exports = loggerFn => pTap(val => {
-	const log = loggerFn || console.log;
+const pLog = logger => pTap(val => {
+	const log = logger || console.log;
 	log(val);
 });
 
-module.exports.catch = loggerFn => pTap.catch(err => {
-	const log = loggerFn || console.log;
-	log(err.stack || err);
+module.exports = pLog;
+module.exports.default = pLog;
+
+module.exports.catch = logger => pTap.catch(error => {
+	const log = logger || console.log;
+	log(error.stack || error);
 });
