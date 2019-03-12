@@ -6,7 +6,7 @@
 ## Install
 
 ```
-$ npm install --save p-log
+$ npm install p-log
 ```
 
 
@@ -16,7 +16,7 @@ $ npm install --save p-log
 const pLog = require('p-log');
 
 Promise.resolve('unicorn')
-	.then(pLog()) // logs `unicorn`
+	.then(pLog()) // Logs `unicorn`
 	.then(value => {
 		// `value` is still `unicorn`
 	});
@@ -29,7 +29,7 @@ Promise.resolve()
 	.then(() => {
 		throw new Error('pony');
 	})
-	.catch(pLog.catch()) // logs `Error: pony`
+	.catch(pLog.catch()) // Logs `Error: pony`
 	.catch(error => {
 		// `error` is still `Error: pony`
 	});
@@ -42,13 +42,13 @@ Promise.resolve()
 
 Use this in a `.then()` method.
 
-Returns a [thunk](https://en.m.wikipedia.org/wiki/Thunk) that returns a `Promise`.
+Returns a [thunk](https://en.wikipedia.org/wiki/Thunk) that returns a `Promise`.
 
 ### pLog.catch([logger])
 
 Use this in a `.catch()` method.
 
-Returns a [thunk](https://en.m.wikipedia.org/wiki/Thunk) that returns a `Promise`.
+Returns a [thunk](https://en.wikipedia.org/wiki/Thunk) that returns a `Promise`.
 
 #### logger
 

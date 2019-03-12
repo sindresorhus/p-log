@@ -42,7 +42,7 @@
 		"bluebird"
 	],
 	"dependencies": {
-		"p-tap": "^1.0.0"
+		"p-tap": "^3.0.0"
 	},
 	"devDependencies": {
 		"ava": "^1.3.1",
