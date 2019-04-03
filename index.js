@@ -7,6 +7,7 @@ const pLog = (logger = console.log) => pTap(value => {
 });
 
 module.exports = pLog;
+// TODO: Remove this for the next major release
 module.exports.default = pLog;
 
 module.exports.catch = (logger = console.log) => pTap.catch(error => {
