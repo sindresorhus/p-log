@@ -1,5 +1,5 @@
-import {expectType} from 'tsd-check';
-import pLog from '.';
+import {expectType} from 'tsd';
+import pLog = require('.');
 
 Promise.resolve('unicorn')
 	.then(pLog())
