@@ -11,6 +11,11 @@ Promise.resolve('unicorn')
 	.then(val => {
 		expectType<string>(val);
 	});
+Promise.resolve('unicorn')
+	.then(pLog(val => expectType<string>(val)))
+	.then(val => {
+		expectType<string>(val);
+	});
 
 Promise.reject(new Error('pony')).catch(pLog.catch());
 Promise.reject(new Error('pony')).catch(pLog.catch(console.dir));
