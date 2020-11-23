@@ -1,5 +1,5 @@
 declare namespace pLog {
-	type Logger = (message: unknown) => void;
+	type Logger<T = unknown> = (message: T) => void;
 }
 
 declare const pLog: {
@@ -20,7 +20,7 @@ declare const pLog: {
 		});
 	```
 	*/
-	<ValueType>(logger?: pLog.Logger): (value: ValueType) => Promise<ValueType>;
+	<ValueType>(logger?: pLog.Logger<ValueType>): (value: ValueType) => Promise<ValueType>;
 
 	/**
 	Log the error of a promise. Use this in a `.catch()` method.
