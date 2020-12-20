@@ -4,10 +4,11 @@
 	"description": "Log the value/error of a promise",
 	"license": "MIT",
 	"repository": "sindresorhus/p-log",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
 	"engines": {
 		"node": ">=8"

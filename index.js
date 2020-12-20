@@ -1,5 +1,4 @@
 'use strict';
-
 const pTap = require('p-tap');
 
 const pLog = (logger = console.log) => pTap(value => {
