@@ -1,6 +1,4 @@
-declare namespace pLog {
-	type Logger<T = unknown> = (message: T) => void;
-}
+export type Logger<T = unknown> = (message: T) => void;
 
 declare const pLog: {
 	/**
@@ -11,7 +9,7 @@ declare const pLog: {
 
 	@example
 	```
-	import pLog = require('p-log');
+	import pLog from 'p-log';
 
 	Promise.resolve('unicorn')
 		.then(pLog()) // Logs `unicorn`
@@ -20,7 +18,7 @@ declare const pLog: {
 		});
 	```
 	*/
-	<ValueType>(logger?: pLog.Logger<ValueType>): (value: ValueType) => Promise<ValueType>;
+	<ValueType>(logger?: Logger<ValueType>): (value: ValueType) => Promise<ValueType>;
 
 	/**
 	Log the error of a promise. Use this in a `.catch()` method.
@@ -30,7 +28,7 @@ declare const pLog: {
 
 	@example
 	```
-	const pLog = require('p-log');
+	import pLog from 'p-log';
 
 	Promise.resolve()
 		.then(() => {
@@ -42,10 +40,7 @@ declare const pLog: {
 		});
 	```
 	*/
-	catch(logger?: pLog.Logger): (error: unknown) => Promise<never>;
-
-	// TODO: Remove this for the next major release
-	default: typeof pLog;
+	catch(logger?: Logger): (error: unknown) => Promise<never>;
 };
 
-export = pLog;
+export default pLog;

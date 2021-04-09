@@ -11,7 +11,7 @@ $ npm install p-log
 ## Usage
 
 ```js
-const pLog = require('p-log');
+import pLog from 'p-log';
 
 Promise.resolve('unicorn')
 	.then(pLog()) // Logs `unicorn`
@@ -21,7 +21,7 @@ Promise.resolve('unicorn')
 ```
 
 ```js
-const pLog = require('p-log');
+import pLog from 'p-log';
 
 Promise.resolve()
 	.then(() => {

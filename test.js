@@ -1,5 +1,5 @@
 import test from 'ava';
-import pLog from '.';
+import pLog from './index.js';
 
 const fixture = Symbol('fixture');
 const fixtureError = new Error('fixture');
